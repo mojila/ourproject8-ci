@@ -40,7 +40,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="alert alert-success alert-dismissible" style="position: fixed; top: 4em; left: 50%; width: 480px; margin-left:-240px; z-index: 999;">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
       <h4><i class="icon fa fa-check-circle-o"></i> Perhatian!</h4>
-      '.$_SESSION['success'].' '.$_SESSION['nama'].'
+      '.$_SESSION['success'].'
+    </div>
+    ';
+  }
+  if(isset($_SESSION['error'])){
+    echo '
+    <div class="alert alert-danger alert-dismissible" style="position: fixed; top: 4em; left: 50%; width: 480px; margin-left:-240px; z-index: 999;">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <h4><i class="icon fa fa-exclamation-circle"></i> Perhatian!</h4>
+      '.$_SESSION['error'].'
     </div>
     ';
   }

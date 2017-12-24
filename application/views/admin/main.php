@@ -7,19 +7,19 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Identitas Situs</h3>
             </div>
-            <form role="form">
+            <form role="form" action="<?php echo base_url('sites/update_identitas'); ?>" method="post">
             <div class="box-body">
                 <div class="form-group">
                     <label>Nama Situs</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama situs ..." value="<?php echo $site->nama; ?>">
+                    <input type="text" name="nama" class="form-control" placeholder="Masukkan nama situs ..." value="<?php echo $site->nama; ?>">
                 </div>
                 <div class="form-group">
                     <label>Deskripsi</label>
-                    <textarea class="form-control" name="deskripsi" id="" rows="2"></textarea>
+                    <textarea class="form-control" name="deskripsi" id="" rows="2"><?php echo $site->deskripsi; ?></textarea>
                 </div>                
             </div>
             <div class="box-footer">
-                <div class="btn btn-warning btn-flat pull-right">Simpan</div>                        
+                <button class="btn btn-warning btn-flat pull-right">Simpan</button>
             </div>
             </form>
         </div>
@@ -29,22 +29,22 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Logo Situs</h3>
             </div>
-            <form role="form" action="<?php echo base_url('site/image_update'); ?>" enctype="multipart/form-data">
+            <form role="form" action="<?php echo base_url('sites/update_logo'); ?>" enctype="multipart/form-data" method="post">
             <div class="box-body">
                 <div class="row">
                     <div class="col col-md-12">
-                        <center><img id="logo_upload_preview" src="<?php echo $site->logo; ?>" alt="Belum Ada Logo" class="img-responsive pad"></center>
+                        <center><img id="logo_upload_preview" src="<?php echo base_url('dist/img/').$site->logo; ?>" alt="Belum Ada Logo" class="img-responsive pad"></center>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-md-12">
                         <input type="file" name="logo" id="input_logo" style="visibility: hidden;">
-                        <center><span id="unggah_logo" class="btn btn-default btn-flat">Unggah Logo (64 x 64)</span></center>
+                        <center><span id="unggah_logo" class="btn btn-default btn-flat">Unggah (max 128 x 128)</span></center>
                     </div>
                 </div>
             </div>
             <div class="box-footer">
-                <div class="btn btn-success btn-flat pull-right">Simpan</div>                        
+                <button class="btn btn-success btn-flat pull-right">Simpan</button>
             </div>
             </form>
         </div>
@@ -54,10 +54,10 @@
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-aqua-active">
               <h3 class="widget-user-username"><?php echo $site->nama; ?></h3>
-              <h5 class="widget-user-desc">Founder &amp; CEO</h5>
+              <h5 class="widget-user-desc"><?php echo $site->deskripsi; ?></h5>
             </div>
             <div class="widget-user-image">
-              <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+              <img class="img-circle" src="<?php echo base_url('dist/img/').$site->logo; ?>" alt="User Avatar">
             </div>
             <div class="box-footer">
               <div class="row">
@@ -97,14 +97,12 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Sunting Tentang Situs</h3>
             </div>
-            <form role="form">
+            <form role="form" action="<?php echo base_url('sites/update_tentang') ?>" method="post">
             <div class="box-body pad">
-                <textarea id="tentang" name="tentang" rows="10" cols="80">
-
-                </textarea>
+                <textarea id="tentang" name="tentang" rows="10" cols="80"><?php echo $site->tentang ?></textarea>
             </div>
             <div class="box-footer">
-                <div class="btn btn-primary btn-flat pull-right">Simpan</div>
+                <button class="btn btn-primary btn-flat pull-right">Simpan</button>
             </div>
             </form>
         </div>
