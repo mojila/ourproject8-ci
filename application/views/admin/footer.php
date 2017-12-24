@@ -26,9 +26,32 @@
 <script src="<?php echo base_url(); ?>bower_components/ckeditor/ckeditor.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
+<!-- Fastclick -->
+<script src="<?php echo base_url(); ?>bower_components/fastclick/lib/fastclick.js"></script>
 <script>
+    $.readURL = function(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('#logo_upload_preview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
     $(function() {
+        // CKEDITOR
         CKEDITOR.replace('tentang');
+        // Unggah Logo
+        $('#unggah_logo').on('click', function() {
+          $('#input_logo').click();
+        });
+        // Preview Logo
+        $('#input_logo').on('change', function() {
+          $.readURL(this);
+        });
     });
 </script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

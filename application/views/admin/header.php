@@ -34,6 +34,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
+<?php 
+  if(isset($_SESSION['success'])){
+    echo '
+    <div class="alert alert-success alert-dismissible" style="position: fixed; top: 4em; left: 50%; width: 480px; margin-left:-240px; z-index: 999;">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <h4><i class="icon fa fa-check-circle-o"></i> Perhatian!</h4>
+      '.$_SESSION['success'].' '.$_SESSION['nama'].'
+    </div>
+    ';
+  }
+?>
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -128,16 +139,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">GENERAL</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-globe"></i> <span>Dashboard</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li><a href="#"><i class="fa fa-briefcase"></i> <span>Produk</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-bars"></i> <span>Pengaturan Lain</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#"><i class="fa fa-percent"></i> Promo</a></li>
+            <li><a href="#"><i class="fa fa-picture-o"></i> Slide Show</a></li>
+            <li><a href="#"><i class="fa fa-comments"></i> Testimoni</a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i>Email Langganan</a></li>
+            <li><a href="#"><i class="fa fa-file"></i>Pricelist</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Kontak</a></li>
           </ul>
         </li>
       </ul>

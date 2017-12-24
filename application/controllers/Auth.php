@@ -33,10 +33,13 @@
                 );
 
                 $this->session->set_userdata($data_session);
+                $this->session->set_flashdata("success", "Selamat Datang");                
 
                 redirect(base_url("admin"));
             } else {
-                echo "Kombinasi Surel dan Kata Sandi salah. <a href='".base_url('auth')."'>Kembali</a>";
+                $this->session->set_flashdata("warning", "Surel Atau Kata Sandi Salah");
+
+                redirect(base_url("auth"));
             }
         }
 

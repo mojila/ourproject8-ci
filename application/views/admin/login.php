@@ -27,7 +27,18 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="overflow-y: hidden;">
+<?php 
+  if(isset($_SESSION['warning'])){
+    echo '
+    <div class="alert alert-warning alert-dismissible" style="position: fixed; top: 1em; left: 50%; width: 480px; margin-left:-240px;">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <h4><i class="icon fa fa-warning"></i> Perhatian!</h4>
+      '.$_SESSION['warning'].'
+    </div>
+    ';
+  }
+?>
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>Our</b>Admin</a>
@@ -66,6 +77,8 @@
 <script src="<?php echo base_url(); ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="<?php echo base_url(); ?>plugins/iCheck/icheck.min.js"></script>
+<!-- Fastclick -->
+<script src="<?php echo base_url(); ?>bower_components/fastclick/lib/fastclick.js"></script>
 <script>
   $(function () {
     $('input').iCheck({

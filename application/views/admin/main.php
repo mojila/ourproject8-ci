@@ -19,7 +19,7 @@
                 </div>                
             </div>
             <div class="box-footer">
-                <div class="btn btn-warning pull-right">Simpan</div>                        
+                <div class="btn btn-warning btn-flat pull-right">Simpan</div>                        
             </div>
             </form>
         </div>
@@ -29,12 +29,22 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Logo Situs</h3>
             </div>
-            <form role="form">
+            <form role="form" action="<?php echo base_url('site/image_update'); ?>" enctype="multipart/form-data">
             <div class="box-body">
-                adaw
+                <div class="row">
+                    <div class="col col-md-12">
+                        <center><img id="logo_upload_preview" src="<?php echo $site->logo; ?>" alt="Belum Ada Logo" class="img-responsive pad"></center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-12">
+                        <input type="file" name="logo" id="input_logo" style="visibility: hidden;">
+                        <center><span id="unggah_logo" class="btn btn-default btn-flat">Unggah Logo (64 x 64)</span></center>
+                    </div>
+                </div>
             </div>
             <div class="box-footer">
-                <div class="btn btn-success pull-right">Simpan</div>                        
+                <div class="btn btn-success btn-flat pull-right">Simpan</div>                        
             </div>
             </form>
         </div>
@@ -90,11 +100,11 @@
             <form role="form">
             <div class="box-body pad">
                 <textarea id="tentang" name="tentang" rows="10" cols="80">
-                    
+
                 </textarea>
             </div>
             <div class="box-footer">
-                <div class="btn btn-primary pull-right">Simpan</div>
+                <div class="btn btn-primary btn-flat pull-right">Simpan</div>
             </div>
             </form>
         </div>
