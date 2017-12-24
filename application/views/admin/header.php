@@ -155,6 +155,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="#"><i class="fa fa-phone"></i>Kontak</a></li>
           </ul>
         </li>
+        <li class="header">PENGGUNA</li>
+        <li><a href="#"><i class="fa fa-user  "></i> <span>Admin</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

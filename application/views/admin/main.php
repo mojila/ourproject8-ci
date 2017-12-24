@@ -64,23 +64,23 @@
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">3,200</h5>
-                    <span class="description-text">SALES</span>
+                    <span class="description-text">PRODUK</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">13,000</h5>
-                    <span class="description-text">FOLLOWERS</span>
+                    <h5 class="description-header">13</h5>
+                    <span class="description-text">PELANGGAN</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4">
                   <div class="description-block">
-                    <h5 class="description-header">35</h5>
-                    <span class="description-text">PRODUCTS</span>
+                    <h5 class="description-header">1</h5>
+                    <span class="description-text">ADMIN</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
