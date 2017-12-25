@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2017 at 09:06 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: 25 Des 2017 pada 11.33
+-- Versi Server: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gambar_produk`
+-- Struktur dari tabel `gambar_produk`
 --
 
 CREATE TABLE `gambar_produk` (
@@ -35,20 +35,10 @@ CREATE TABLE `gambar_produk` (
   `urutan` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gambar_produk`
---
-
-INSERT INTO `gambar_produk` (`id`, `kode_produk`, `file`, `urutan`) VALUES
-(9, 1, '149ea13d6ece106cff63297033c663d4.png', 1),
-(10, 1, 'fad9633c675bd3f3986c14ff642c9641.png', 2),
-(11, 1, '4d86bdc1a2d99acb422fface9a0a3ac2.png', 3),
-(12, 1, '53090ef94f31f3fbd0faad90d4477aeb.png', 4);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `langganan`
+-- Struktur dari tabel `langganan`
 --
 
 CREATE TABLE `langganan` (
@@ -60,7 +50,7 @@ CREATE TABLE `langganan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengguna`
+-- Struktur dari tabel `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -72,7 +62,7 @@ CREATE TABLE `pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pengguna`
+-- Dumping data untuk tabel `pengguna`
 --
 
 INSERT INTO `pengguna` (`id`, `nama`, `surel`, `kata_sandi`, `foto`) VALUES
@@ -81,7 +71,7 @@ INSERT INTO `pengguna` (`id`, `nama`, `surel`, `kata_sandi`, `foto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -95,17 +85,10 @@ CREATE TABLE `produk` (
   `minimal_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `produk`
---
-
-INSERT INTO `produk` (`id`, `kode`, `nama`, `bintang`, `keterangan`, `ukuran`, `variasi`, `minimal_order`) VALUES
-(4, '1', 'coba aja lagi', 1, '<p>adaw</p>\r\n', '<p>adaw</p>\r\n', 'putih', 1);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `situs`
+-- Struktur dari tabel `situs`
 --
 
 CREATE TABLE `situs` (
@@ -117,7 +100,7 @@ CREATE TABLE `situs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `situs`
+-- Dumping data untuk tabel `situs`
 --
 
 INSERT INTO `situs` (`id`, `nama`, `deskripsi`, `tentang`, `logo`) VALUES
@@ -126,7 +109,7 @@ INSERT INTO `situs` (`id`, `nama`, `deskripsi`, `tentang`, `logo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slide_show`
+-- Struktur dari tabel `slide_show`
 --
 
 CREATE TABLE `slide_show` (
@@ -141,7 +124,7 @@ CREATE TABLE `slide_show` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sosial_hub`
+-- Struktur dari tabel `sosial_hub`
 --
 
 CREATE TABLE `sosial_hub` (
@@ -156,12 +139,12 @@ CREATE TABLE `sosial_hub` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimoni`
+-- Struktur dari tabel `testimoni`
 --
 
 CREATE TABLE `testimoni` (
   `id` int(11) NOT NULL,
-  `nomor` int(1) NOT NULL,
+  `urutan` int(1) NOT NULL,
   `nama` varchar(32) NOT NULL,
   `isi` text NOT NULL,
   `foto` varchar(32) NOT NULL
@@ -239,7 +222,7 @@ ALTER TABLE `langganan`
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `produk`
