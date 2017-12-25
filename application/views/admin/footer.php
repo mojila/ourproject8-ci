@@ -22,12 +22,19 @@
 <script src="<?php echo base_url(); ?>bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url(); ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url(); ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="<?php echo base_url(); ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- CK Editor -->
 <script src="<?php echo base_url(); ?>bower_components/ckeditor/ckeditor.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
 <!-- Fastclick -->
 <script src="<?php echo base_url(); ?>bower_components/fastclick/lib/fastclick.js"></script>
+<!-- Sweetalert2 -->
+<script src="<?php echo base_url(); ?>bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
 <script>
     $.readURL = function(input, preview) {
       if (input.files && input.files[0]) {
@@ -85,6 +92,29 @@
       $('#gambar_produk_4').on('change', function() {
         $.readURL(this, 'preview_gambar_produk_4');
       });
+    });
+
+    // Hapus Produk
+    $.hapusProduk = function(id) {
+      swal({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.value) {
+          setTimeout(() => {
+            window.location.href = "<?php echo base_url('products/hapus/'); ?>" + id;
+          }, 1000);
+        }
+      })
+    };
+
+    $(function() {
+      $('#list_produk').DataTable();
     });
 </script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -85,6 +85,20 @@
 
             $this->session->set_flashdata("success", "Berhasil Ditambahkan");
 
-            redirect(base_url('admin/produk'));
+            redirect(base_url('admin/list_produk'));
+        }
+
+        public function hapus($kode) {
+            $where = array('kode' => $kode);
+
+            $this->product->delete($where, 'produk');
+
+            $where = array('kode_produk' => $kode);
+
+            $this->product->delete($where, 'gambar_produk');
+
+            $this->session->set_flashdata("success", "Berhasil Dihapus");
+            
+            redirect(base_url('admin/list_produk'));
         }
     }

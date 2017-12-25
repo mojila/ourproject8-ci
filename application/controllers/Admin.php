@@ -24,18 +24,33 @@
             $this->load->view('/admin/footer');    
         }
 
-        public function produk() {
+        public function tambah_produk() {
             $data['header'] = array(
                 'page_header' => 'Produk',
                 'description' => 'Manajemen Produk'
             );
 
-            $data['site'] = $this->site->get()->row();            
+            $data['site'] = $this->site->get()->row();
 
             $data['kode_produk'] = $this->product->count() + 1;
 
             $this->load->view('/admin/header', $data);    
             $this->load->view('/admin/produk', $data);
             $this->load->view('/admin/footer');   
+        }
+
+        public function list_produk() {
+            $data['header'] = array(
+                'page_header' => 'Produk',
+                'description' => 'Manajemen Produk'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['product'] = $this->product->get();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/list_produk', $data);
+            $this->load->view('/admin/footer');
         }
     }

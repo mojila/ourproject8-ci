@@ -12,10 +12,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="shortcut icon" href="<?php echo base_url('dist/img/').$site->logo; ?>">
   <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/Ionicons/css/ionicons.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/sweetalert2/dist/sweetalert2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -149,12 +153,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">GENERAL</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="<?php if(strtolower($header['page_header']) == 'dashboard'){ echo 'active'; } ?>"><a href="<?php echo base_url('admin'); ?>"><i class="fa fa-globe"></i> <span>Dashboard</span></a></li>
-        <li class="<?php if(strtolower($header['page_header']) == 'produk'){ echo 'active'; } ?>"><a href="<?php echo base_url('admin/produk'); ?>"><i class="fa fa-briefcase"></i> <span>Produk</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-bars"></i> <span>Pengaturan Lain</span>
+        <li class="treeview <?php if(strtolower($header['page_header']) == 'produk'){ echo 'active'; } ?>">
+          <a href="#"><i class="fa fa-briefcase"></i> <span>Produk</span>
             <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('admin/tambah_produk'); ?>"><i class="fa fa-plus"></i> Tambah</a></li>
+            <li><a href="<?php echo base_url('admin/list_produk'); ?>"><i class="fa fa-bars"></i> List</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-cogs"></i> <span>Pengaturan Lain</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-percent"></i> Promo</a></li>
