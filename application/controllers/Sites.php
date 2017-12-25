@@ -29,9 +29,7 @@
         public function update_logo() {
             $config['upload_path']          = './dist/img/';
             $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_size']             = 100;
-            $config['max_width']            = 128;
-            $config['max_height']           = 128;
+            $config['max_size']             = 2000;
             $config['encrypt_name']         = TRUE;
          
             $this->load->library('upload', $config);
