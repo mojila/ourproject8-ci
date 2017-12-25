@@ -9,7 +9,7 @@
     <meta name="author" content="Mojila">
     <meta name="keywords" content="<?php echo $situs->nama; ?>">
     <meta name="description" content="<?php echo $situs->deskripsi; ?>">
-    <title><?php echo $situs->nama; ?></title>
+    <title><?php echo $situs->nama; ?> | <?php echo $page['judul']; ?></title>
     <!-- Shortcut Icon -->
     <link rel="shortcut icon" href="<?php echo base_url('dist/img/').$situs->logo; ?>">
     <!-- Google Fonts -->
