@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="<?php echo base_url('admin'); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>O</b>UR</span>
       <!-- logo for regular state and mobile devices -->
@@ -180,7 +180,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </li>
         <li class="header">PENGGUNA</li>
-        <li><a href="#"><i class="fa fa-user  "></i> <span>Admin</span></a></li>
+        <li class="<?php if(strtolower($header['page_header']) == 'pengguna'){ echo 'active'; } ?>"><a href="<?php echo base_url('admin/pengguna'); ?>"><i class="fa fa-user"></i> <span>Admin</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

@@ -4,10 +4,13 @@
             parent::__construct();
             
             $this->load->model('admin');
+            $this->load->model('site');
         }
 
         public function index() {
-            $this->load->view('/admin/login');            
+            $data['site'] = $this->site->get()->row();
+
+            $this->load->view('/admin/login', $data);
         }
 
         public function login() {

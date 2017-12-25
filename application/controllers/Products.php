@@ -38,6 +38,66 @@
 
             $this->product->update($where, $data, 'produk');
 
+            if($this->upload->do_upload('gambar_produk_1')){
+                $nama = $this->upload->data('file_name');
+                
+                $data = array(
+                    'file' => $nama
+                );
+
+                $where = array(
+                    'kode_produk' => $kode,
+                    'urutan' => 1
+                );
+
+                $this->product->update($where, $data, 'gambar_produk');                
+            }
+
+            if($this->upload->do_upload('gambar_produk_2')){
+                $nama = $this->upload->data('file_name');
+                
+                $data = array(
+                    'file' => $nama
+                );
+
+                $where = array(
+                    'kode_produk' => $kode,
+                    'urutan' => 2
+                );
+
+                $this->product->update($where, $data, 'gambar_produk');                
+            }
+
+            if($this->upload->do_upload('gambar_produk_3')){
+                $nama = $this->upload->data('file_name');
+                
+                $data = array(
+                    'file' => $nama
+                );
+
+                $where = array(
+                    'kode_produk' => $kode,
+                    'urutan' => 3
+                );
+
+                $this->product->update($where, $data, 'gambar_produk');                
+            }
+
+            if($this->upload->do_upload('gambar_produk_4')){
+                $nama = $this->upload->data('file_name');
+                
+                $data = array(
+                    'file' => $nama
+                );
+
+                $where = array(
+                    'kode_produk' => $kode,
+                    'urutan' => 4
+                );
+
+                $this->product->update($where, $data, 'gambar_produk');                
+            }
+
             $this->session->set_flashdata("success", "Berhasil Diedit");
 
             redirect(base_url('admin/list_produk'));            

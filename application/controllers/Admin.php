@@ -9,6 +9,8 @@
 
             $this->load->model('site');
             $this->load->model('product');
+            $this->load->model('user');
+            $this->load->model('subscribe');
         }
 
         public function index() {
@@ -19,9 +21,47 @@
 
             $data['site'] = $this->site->get()->row();
 
+            $data['pelanggan'] = $this->subscribe->count();
+            $data['produk'] = $this->product->count();
+            $data['pengguna'] = $this->user->count();
+
             $this->load->view('/admin/header', $data);    
             $this->load->view('/admin/main', $data);
             $this->load->view('/admin/footer');    
+        }
+
+        public function pengguna() {
+            $data['header'] = array(
+                'page_header' => 'Pengguna',
+                'description' => 'Pengaturan Pengguna'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['pengguna'] = $this->user->get();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/pengguna', $data);
+            $this->load->view('/admin/footer');
+        }
+
+        public function edit_pengguna($id) {
+            $data['header'] = array(
+                'page_header' => 'Pengguna',
+                'description' => 'Pengaturan Pengguna'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $where = array(
+                'id' => $id
+            );
+
+            $data['pengguna'] = $this->user->get_one('pengguna', $where)->row();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/edit_pengguna', $data);
+            $this->load->view('/admin/footer');
         }
 
         public function tambah_produk() {
