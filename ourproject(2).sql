@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2017 at 04:38 AM
+-- Generation Time: Dec 25, 2017 at 08:18 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -30,9 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `gambar_produk` (
   `id` int(11) NOT NULL,
-  `produk_id` int(11) NOT NULL,
-  `nama` varchar(32) NOT NULL
+  `kode_produk` int(11) NOT NULL,
+  `file` text NOT NULL,
+  `urutan` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gambar_produk`
+--
+
+INSERT INTO `gambar_produk` (`id`, `kode_produk`, `file`, `urutan`) VALUES
+(9, 1, '149ea13d6ece106cff63297033c663d4.png', 1),
+(10, 1, 'fad9633c675bd3f3986c14ff642c9641.png', 2),
+(11, 1, '4d86bdc1a2d99acb422fface9a0a3ac2.png', 3),
+(12, 1, '53090ef94f31f3fbd0faad90d4477aeb.png', 4);
 
 -- --------------------------------------------------------
 
@@ -75,12 +86,21 @@ INSERT INTO `pengguna` (`id`, `nama`, `surel`, `kata_sandi`, `foto`) VALUES
 
 CREATE TABLE `produk` (
   `id` int(11) NOT NULL,
+  `kode` varchar(32) NOT NULL,
   `nama` varchar(64) NOT NULL,
+  `bintang` int(1) NOT NULL,
   `keterangan` text NOT NULL,
-  `ukuran` varchar(16) NOT NULL,
-  `variasi` varchar(32) NOT NULL,
+  `ukuran` text NOT NULL,
+  `variasi` text NOT NULL,
   `minimal_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id`, `kode`, `nama`, `bintang`, `keterangan`, `ukuran`, `variasi`, `minimal_order`) VALUES
+(4, '1', 'coba aja', 1, '<p>adaw</p>\r\n', '<p>adaw</p>\r\n', 'putih', 1);
 
 -- --------------------------------------------------------
 
@@ -93,7 +113,7 @@ CREATE TABLE `situs` (
   `nama` varchar(32) NOT NULL,
   `deskripsi` varchar(64) NOT NULL,
   `tentang` text NOT NULL,
-  `logo` varchar(32) NOT NULL
+  `logo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -101,7 +121,7 @@ CREATE TABLE `situs` (
 --
 
 INSERT INTO `situs` (`id`, `nama`, `deskripsi`, `tentang`, `logo`) VALUES
-(1, 'OurProject8', '', '', '');
+(1, 'OurProject8', 'Coba Deskripsi', '<p>Coba Tentang Situs</p>\r\n', 'c6cbef0ee9de3a09c88fed999462203b.png');
 
 -- --------------------------------------------------------
 
@@ -207,7 +227,7 @@ ALTER TABLE `testimoni`
 -- AUTO_INCREMENT for table `gambar_produk`
 --
 ALTER TABLE `gambar_produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `langganan`
@@ -225,7 +245,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `situs`
