@@ -134,23 +134,66 @@
         </section> 
         <section class="ps-section ps-section--offer pt-10 pb-40">
             <div class="container">
-                <div class="ps-section__header text-center mb-100">
+                <div class="ps-section__header text-center mb-50">
                     <h4 class="ps-section__top">Making People Happy</h4>
                     <h3 class="ps-section__title ps-section__title--full">OFFER THIS MONTH</h3>
                 </div>
                 <div class="ps-section__content">
-                    adaw
+                    <div class="col col-md-6">
+                        <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
+                    </div>
                 </div>
             </div>
         </section>        
         <div class="ps-section ps-section--offer">
             <div class="container">
                 <div class="ps-section__header text-center mb-100">
-                    <h4 class="ps-section__top">We Have Partners</h4>
-                    <h3 class="ps-section__title ps-section__title--full">OUR PARTNERS</h3>
+                    <h4 class="ps-section__top">We Have Satisfied Customer</h4>
+                    <h3 class="ps-section__title ps-section__title--full">OUR CUSTOMER</h3>
                 </div>
                 <div class="ps-section__content">
-                    adaw
+                    <div class="col col-md-4">
+                        <div class="row">
+                            <center><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style="width: 180px; height: 180px; border-radius: 50%;"></center>
+                        </div>
+                        <div class="row pt-5">
+                            <h3 class="title text-center ">Nama</h3>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <p class"">"Hello"</p>                            
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <div class="row">
+                            <center><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style=" border-radius: 10%;"></center>
+                        </div>
+                        <div class="row pt-5">
+                            <h3 class="title text-center">Nama</h3>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <p class"">"Hello"</p>  
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <div class="row">
+                            <center><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style="width: 180px; height: 180px; border-radius: 50%;"></center>
+                        </div>
+                        <div class="row pt-5">
+                            <h3 class="text-center">Nama</h3>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <p class"">"Hello"</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
