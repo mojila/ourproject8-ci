@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2017 at 08:18 AM
+-- Generation Time: Dec 25, 2017 at 09:06 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -100,7 +100,7 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `kode`, `nama`, `bintang`, `keterangan`, `ukuran`, `variasi`, `minimal_order`) VALUES
-(4, '1', 'coba aja', 1, '<p>adaw</p>\r\n', '<p>adaw</p>\r\n', 'putih', 1);
+(4, '1', 'coba aja lagi', 1, '<p>adaw</p>\r\n', '<p>adaw</p>\r\n', 'putih', 1);
 
 -- --------------------------------------------------------
 
