@@ -12,6 +12,14 @@
             return $this->db->get('produk')->result();
         }
 
+        public function get_gambar($table, $where) {
+            return $this->db->get_where($table, $where)->result();
+        }
+
+        public function get_one($table, $where) {
+            return $this->db->get_where($table, $where);
+        }
+
         public function update($where, $data, $table) {
             $this->db->where($where);
             $this->db->update($table, $data);

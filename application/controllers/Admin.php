@@ -39,6 +39,31 @@
             $this->load->view('/admin/footer');   
         }
 
+        public function edit_produk($id) {
+            $data['header'] = array(
+                'page_header' => 'Produk',
+                'description' => 'Manajemen Produk'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $where = array(
+                'kode' => $id
+            );
+
+            $data['produk'] = $this->product->get_one('produk', $where)->row();
+
+            $where = array(
+                'kode_produk' => $id
+            );
+
+            $data['gambar_produk'] = $this->product->get_gambar('gambar_produk', $where);            
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/edit_produk', $data);
+            $this->load->view('/admin/footer');
+        }
+
         public function list_produk() {
             $data['header'] = array(
                 'page_header' => 'Produk',

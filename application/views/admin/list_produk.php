@@ -29,7 +29,7 @@
                                 <td>'.$item->kode.'</td>
                                 <td>'.$item->nama.'</td>
                                 <td>
-                                    <button class="btn btn-info btn-flat"><i class="fa fa-pencil"></i> Edit</button>
+                                    <a href="'.base_url('admin/edit_produk/').$item->kode.'"><button class="btn btn-info btn-flat"><i class="fa fa-pencil"></i> Edit</button></a>
                                     <button class="btn btn-danger btn-flat" onclick="$.hapusProduk('.$item->kode.')"><i class="fa fa-trash"></i> Hapus</button>
                                 </td>
                             </tr>
