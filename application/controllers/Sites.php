@@ -55,7 +55,7 @@
                 $this->site->update($where, $data, 'situs');                
                 $this->session->set_flashdata("success", "Logo Diganti");
 
-                redirect(base_url("admin"));                                
+                redirect(base_url("admin"));
             }
         }
 

@@ -29,12 +29,12 @@
 <!-- Fastclick -->
 <script src="<?php echo base_url(); ?>bower_components/fastclick/lib/fastclick.js"></script>
 <script>
-    $.readURL = function(input) {
+    $.readURL = function(input, preview) {
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function(e) {
-          $('#logo_upload_preview').attr('src', e.target.result);
+          $('#' + preview).attr('src', e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);
@@ -50,8 +50,41 @@
         });
         // Preview Logo
         $('#input_logo').on('change', function() {
-          $.readURL(this);
+          $.readURL(this, 'logo_upload_preview');
         });
+    });
+
+    $(function() {
+      // CKEDITOR
+      CKEDITOR.replace('keterangan');
+      CKEDITOR.replace('ukuran');
+      // Unggah Gambar Produk
+      $('#unggah_gambar_produk1').on('click', function() {
+        $('#gambar_produk_1').click();
+      });
+      $('#unggah_gambar_produk2').on('click', function() {
+        $('#gambar_produk_2').click();
+      });
+      $('#unggah_gambar_produk3').on('click', function() {
+        $('#gambar_produk_3').click();
+      });
+      $('#unggah_gambar_produk4').on('click', function() {
+        $('#gambar_produk_4').click();
+      });
+      // Preview Logo
+      $('#gambar_produk_1').on('change', function() {
+        $.readURL(this, 'preview_gambar_produk_1');
+        $.readURL(this, 'upload_gambar_produk_utama');
+      });
+      $('#gambar_produk_2').on('change', function() {
+        $.readURL(this, 'preview_gambar_produk_2');
+      });
+      $('#gambar_produk_3').on('change', function() {
+        $.readURL(this, 'preview_gambar_produk_3');
+      });
+      $('#gambar_produk_4').on('change', function() {
+        $.readURL(this, 'preview_gambar_produk_4');
+      });
     });
 </script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -10,6 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>OurAdmin | <?php echo $header['page_header']; ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="shortcut icon" href="<?php echo base_url('dist/img/').$site->logo; ?>">
   <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/font-awesome/css/font-awesome.min.css">
@@ -147,8 +148,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">GENERAL</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-globe"></i> <span>Dashboard</span></a></li>
-        <li><a href="#"><i class="fa fa-briefcase"></i> <span>Produk</span></a></li>
+        <li class="<?php if(strtolower($header['page_header']) == 'dashboard'){ echo 'active'; } ?>"><a href="<?php echo base_url('admin'); ?>"><i class="fa fa-globe"></i> <span>Dashboard</span></a></li>
+        <li class="<?php if(strtolower($header['page_header']) == 'produk'){ echo 'active'; } ?>"><a href="<?php echo base_url('admin/produk'); ?>"><i class="fa fa-briefcase"></i> <span>Produk</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-bars"></i> <span>Pengaturan Lain</span>
             <span class="pull-right-container">

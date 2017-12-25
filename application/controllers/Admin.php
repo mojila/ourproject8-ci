@@ -8,6 +8,7 @@
             }
 
             $this->load->model('site');
+            $this->load->model('product');
         }
 
         public function index() {
@@ -21,5 +22,20 @@
             $this->load->view('/admin/header', $data);    
             $this->load->view('/admin/main', $data);
             $this->load->view('/admin/footer');    
+        }
+
+        public function produk() {
+            $data['header'] = array(
+                'page_header' => 'Produk',
+                'description' => 'Manajemen Produk'
+            );
+
+            $data['site'] = $this->site->get()->row();            
+
+            $data['kode_produk'] = $this->product->count() + 1;
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/produk', $data);
+            $this->load->view('/admin/footer');   
         }
     }

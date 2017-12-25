@@ -38,7 +38,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-md-12">
-                        <input type="file" name="logo" id="input_logo" style="visibility: hidden;">
+                        <input type="file" name="logo" accept=".jpg,.jpeg,.png" id="input_logo" style="visibility: hidden;">
                         <center><span id="unggah_logo" class="btn btn-default btn-flat">Unggah (max 128 x 128)</span></center>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
               <h5 class="widget-user-desc"><?php echo $site->deskripsi; ?></h5>
             </div>
             <div class="widget-user-image">
-              <img class="img-circle" src="<?php echo base_url('dist/img/').$site->logo; ?>" alt="User Avatar">
+              <img class="img-circle" src="<?php echo base_url('dist/img/').$site->logo; ?>" alt="Logo Situs" style="background-color: #fff;">
             </div>
             <div class="box-footer">
               <div class="row">
