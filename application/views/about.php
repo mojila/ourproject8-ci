@@ -24,36 +24,9 @@
                             <p class="ps-about-sign">CEO - Vanila Bakery Shop</p>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 "><img src="<?php echo base_url('dist/img'); ?>/about/about-intro.png" alt="">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 "><img src="<?php echo base_url('dist/img/').$situs->logo; ?>" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <section class="ps-section ps-section--subscribe pt-80 pb-80">
-            <div class="container">
-                <div class="ps-subscribe">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>ABOUT US</h4>
-                            <p>Didirikan sejak tahun 2014, Ourproject8 merupakan industri dengan lingkup skala kecil
-                                hingga menengah (saat ini) yang bergerak pada bidang percetakan, desain, dan kemasan.</p>
-                            <p class="text-uppercase ps-subscribe__highlight">Perumahan Griya
-                                Candi Asri – Blok O No. 7– Candi, Sidoarjo</p>
-                            <p class="text-uppercase ps-subscribe__highlight">JAM KERJA -> SENIN - SABTU JAM 8.00 - 16.00</p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <a class="ps-subscribe__logo" href="index-2.html"><img src="<?php echo base_url('dist/img/'); ?>our-round.png" alt=""></a>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>SUBSCRIBE EMAIL</h4>
-                            <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-                            <form class="ps-subscribe__form" method="post" action="http://nouthemes.com/html/bakery/_action">
-                                <input class="form-control" type="text" placeholder="Type your email...">
-                                <button class="ps-btn ps-btn--sm">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        

@@ -1,9 +1,6 @@
 (function($) {
     'use strict';
     
-    // Container
-    initMap();
-    
     // Maps
     function initMap() {
         var myLatLng = { lat: -7.4940897, lng: 112.7146102 };
@@ -595,12 +592,12 @@
     }
 
     $(document).ready(function() {
+        rating();
         backgroundImage();
         parallax();
         menuBtnToggle();
         subMenuToggle();
         masonry();
-        rating();
         mapConfig();
         niceSelect();
         countDown();
@@ -614,6 +611,8 @@
         dateTimePicker();
         backToTop();
         slickConfig();
+        // Container
+        initMap();
     });
 
     $(window).on('load', function() {

@@ -9,7 +9,7 @@
                             data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="../../assets/images/concept4-100x100.jpg"
                             data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <img class="rev-slidebg" src="<?php echo base_url('dist/img/'); ?>banner/img-slider-1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                            <img class="rev-slidebg" src="<?php echo base_url('dist/img/'); ?>banner/promo-3.png" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                                 data-bgparallax="5" data-no-retina>
                             <div class="tp-caption ps-banner__caption" id="layer01" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                                 data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']"
@@ -29,7 +29,7 @@
                             data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="../../assets/images/concept4-100x100.jpg"
                             data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <img class="rev-slidebg" src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                            <img class="rev-slidebg" src="<?php echo base_url('dist/img/'); ?>banner/promo-1.png" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                                 data-bgparallax="5" data-no-retina>
                             <div class="tp-caption ps-banner__caption" id="layer04" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                                 data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']"
@@ -139,13 +139,13 @@
                     <h3 class="ps-section__title ps-section__title--full">OFFER THIS MONTH</h3>
                 </div>
                 <div class="ps-section__content">
-                    <div class="col col-md-6">
+                    <div class="col col-md-6 col-xs-6 pt-10">
                         <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
                     </div>
-                    <div class="col col-md-3">
+                    <div class="col col-md-3 col-xs-6 pt-10">
                         <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
                     </div>
-                    <div class="col col-md-3">
+                    <div class="col col-md-3 col-xs-12 pt-10">
                         <img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" height="142" class="img-responsive pad">
                     </div>
                 </div>
@@ -200,31 +200,4 @@
         <section class="ps-section ps-section--map">
             <div id="map"></div>
         </section>
-        <section class="ps-section ps-section--subscribe pt-80 pb-80">
-            <div class="container">
-                <div class="ps-subscribe">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>ABOUT US</h4>
-                            <p>Didirikan sejak tahun 2014, Ourproject8 merupakan industri dengan lingkup skala kecil
-                                hingga menengah (saat ini) yang bergerak pada bidang percetakan, desain, dan kemasan.</p>
-                            <p class="text-uppercase ps-subscribe__highlight">Perumahan Griya
-                                Candi Asri – Blok O No. 7– Candi, Sidoarjo</p>
-                            <p class="text-uppercase ps-subscribe__highlight">JAM KERJA -> SENIN - SABTU JAM 8.00 - 16.00</p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <a class="ps-subscribe__logo" href="index-2.html"><img src="<?php echo base_url('dist/img/'); ?>our-round.png" alt=""></a>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>SUBSCRIBE EMAIL</h4>
-                            <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-                            <form class="ps-subscribe__form" method="post" action="http://nouthemes.com/html/bakery/_action">
-                                <input class="form-control" type="text" placeholder="Type your email...">
-                                <button class="ps-btn ps-btn--sm">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        

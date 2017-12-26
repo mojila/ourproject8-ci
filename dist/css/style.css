@@ -3373,7 +3373,8 @@ textarea.form-control {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: #0FACF3;
+  text-outline: 2px 2px #ff0000;
 }
 
 .ps-banner .ps-banner__description {

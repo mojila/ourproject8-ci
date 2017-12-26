@@ -43,4 +43,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('product');
 			$this->load->view('footer');
 		}
+
+		public function galery() {
+			$data['situs'] = $this->site->get()->row();
+			$data['page'] = array(
+				'judul' => 'Galery'
+			);
+
+			$this->load->view('head', $data);
+			$this->load->view('nav', $data);			
+			$this->load->view('galeri');
+			$this->load->view('footer');
+		}
+
+		public function promo() {
+			$data['situs'] = $this->site->get()->row();
+			$data['page'] = array(
+				'judul' => 'Promo'
+			);
+
+			$this->load->view('head', $data);
+			$this->load->view('nav', $data);			
+			$this->load->view('promo');
+			$this->load->view('footer');
+		}
+		public function order() {
+			$data['situs'] = $this->site->get()->row();
+			$data['page'] = array(
+				'judul' => 'How To Order'
+			);
+
+			$this->load->view('head', $data);
+			$this->load->view('nav', $data);			
+			$this->load->view('order');
+			$this->load->view('footer');
+		}
 	}

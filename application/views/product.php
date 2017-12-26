@@ -17,55 +17,7 @@
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-lg-push-3 col-md-push-3">
                         <div class="ps-shop-listing pt-50 pb-40">
                             <div class="ps-shop">
-                                <div class="ps-product--list ps-product--list-large">
-                                    <div class="ps-product__thumbnail">
-                                        <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-2.jpg" alt=""></div>
-                                    <div class="ps-product__content">
-                                        <h4 class="ps-product__title"><a href="product-detail.html">Red sugar flower</a></h4>
-                                        <select class="ps-rating">
-                                            <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
-                                        </p>
-                                        <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="ps-product--list ps-product--list-large">
-                                    <div class="ps-product__thumbnail">
-                                        <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-3.jpg" alt=""></div>
-                                    <div class="ps-product__content">
-                                        <h4 class="ps-product__title"><a href="product-detail.html">Cupcake Queen</a></h4>
-                                        <select class="ps-rating">
-                                            <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
-                                        </p>
-                                        <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="ps-product--list ps-product--list-large">
+                            <div class="ps-product--list ps-product--list-large">
                                     <div class="ps-product__thumbnail">
                                         <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-4.jpg" alt=""></div>
                                     <div class="ps-product__content">
@@ -78,86 +30,17 @@
                                             <option value="5">5</option>
                                         </select>
                                         <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
+                                            Keterangan
                                         </p>
                                         <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="ps-product--list ps-product--list-large">
-                                    <div class="ps-product__thumbnail">
-                                        <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-5.jpg" alt=""></div>
-                                    <div class="ps-product__content">
-                                        <h4 class="ps-product__title"><a href="product-detail.html">Red sugar flower</a></h4>
-                                        <select class="ps-rating">
-                                            <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
-                                        </p>
-                                        <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="ps-product--list ps-product--list-large">
-                                    <div class="ps-product__thumbnail">
-                                        <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-6.jpg" alt=""></div>
-                                    <div class="ps-product__content">
-                                        <h4 class="ps-product__title"><a href="product-detail.html">Cupcake Queen 2</a></h4>
-                                        <select class="ps-rating">
-                                            <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
-                                        </p>
-                                        <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="ps-product--list ps-product--list-large">
-                                    <div class="ps-product__thumbnail">
-                                        <a class="ps-product__overlay" href="product-detail.html"></a><img src="<?php echo base_url('dist/img'); ?>/cake/img-cake-1.jpg" alt=""></div>
-                                    <div class="ps-product__content">
-                                        <h4 class="ps-product__title"><a href="product-detail.html">Cupcake Glory 2</a></h4>
-                                        <select class="ps-rating">
-                                            <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <p class="ps-product__price">
-                                            <del>£25.00</del>£15.00
-                                        </p>
-                                        <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                        <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                            <ul class="ps-product__action">
-                                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                            </ul>
+                                        <footer class="ps-product__footer clearfix">
+                                            <div class="row">
+                                                <div class="col col-md-12">
+                                                    <a class="ps-btn ps-btn--sm" href="#">Lihat Detail<i class="fa fa-angle-right"></i></a>
+                                                    <a class="ps-btn ps-btn--sm" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="https://media.line.me/img/web/lineit_select_line_icon_02.png" alt="" height="16"> Line</a>
+                                                    <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20http://google.com/"><img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/whatsapp-official-logo-png-download.png" alt="" height="16"> WA</a>
+                                                </div>
+                                            </div>
                                         </footer>
                                     </div>
                                 </div>
@@ -224,31 +107,5 @@
                 </div>
             </div>
         </div>
-        <section class="ps-section ps-section--subscribe pt-80 pb-80">
-            <div class="container">
-                <div class="ps-subscribe">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>ABOUT US</h4>
-                            <p>Didirikan sejak tahun 2014, Ourproject8 merupakan industri dengan lingkup skala kecil
-                                hingga menengah (saat ini) yang bergerak pada bidang percetakan, desain, dan kemasan.</p>
-                            <p class="text-uppercase ps-subscribe__highlight">Perumahan Griya
-                                Candi Asri – Blok O No. 7– Candi, Sidoarjo</p>
-                            <p class="text-uppercase ps-subscribe__highlight">JAM KERJA -> SENIN - SABTU JAM 8.00 - 16.00</p>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <a class="ps-subscribe__logo" href="index-2.html"><img src="<?php echo base_url('dist/img/'); ?>our-round.png" alt=""></a>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                            <h4>SUBSCRIBE EMAIL</h4>
-                            <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-                            <form class="ps-subscribe__form" method="post" action="http://nouthemes.com/html/bakery/_action">
-                                <input class="form-control" type="text" placeholder="Type your email...">
-                                <button class="ps-btn ps-btn--sm">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        
+    
