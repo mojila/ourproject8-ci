@@ -9,8 +9,12 @@
 
             $this->load->model('site');
             $this->load->model('product');
+            $this->load->model('category');
             $this->load->model('user');
+            $this->load->model('slide');
             $this->load->model('subscribe');
+            $this->load->model('promo');
+            $this->load->model('testimoni');
         }
 
         public function index() {
@@ -27,7 +31,7 @@
 
             $this->load->view('/admin/header', $data);    
             $this->load->view('/admin/main', $data);
-            $this->load->view('/admin/footer');    
+            $this->load->view('/admin/footer');
         }
 
         public function pengguna() {
@@ -42,6 +46,51 @@
 
             $this->load->view('/admin/header', $data);    
             $this->load->view('/admin/pengguna', $data);
+            $this->load->view('/admin/footer');
+        }
+
+        public function slideshow() {
+            $data['header'] = array(
+                'page_header' => 'Pengaturan Lain',
+                'description' => 'Pengaturan Slideshow'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['slide'] = $this->slide->get();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/slideshow', $data);
+            $this->load->view('/admin/footer');
+        }
+        
+        public function promo() {
+            $data['header'] = array(
+                'page_header' => 'Pengaturan Lain',
+                'description' => 'Pengaturan Promo'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['promo'] = $this->promo->get();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/promo', $data);
+            $this->load->view('/admin/footer');
+        }
+
+        public function testimoni() {
+            $data['header'] = array(
+                'page_header' => 'Pengaturan Lain',
+                'description' => 'Pengaturan Testimoni'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['testimoni'] = $this->testimoni->get();
+
+            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/testimoni', $data);
             $this->load->view('/admin/footer');
         }
 
@@ -74,7 +123,9 @@
 
             $data['kode_produk'] = $this->product->count() + 1;
 
-            $this->load->view('/admin/header', $data);    
+            $data['kategori'] = $this->category->get();
+
+            $this->load->view('/admin/header', $data);
             $this->load->view('/admin/produk', $data);
             $this->load->view('/admin/footer');   
         }
@@ -86,6 +137,8 @@
             );
 
             $data['site'] = $this->site->get()->row();
+
+            $data['kategori'] = $this->category->get();            
 
             $where = array(
                 'kode' => $id
@@ -118,4 +171,6 @@
             $this->load->view('/admin/list_produk', $data);
             $this->load->view('/admin/footer');
         }
+
+        
     }

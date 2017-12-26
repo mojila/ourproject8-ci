@@ -50,7 +50,6 @@
     <script  src="<?php echo base_url(); ?>plugins/slick/slick/slick.min.js"></script>
     <script  src="<?php echo base_url(); ?>plugins/skrollr.min.js"></script>
     <script  src="<?php echo base_url(); ?>plugins/gmap3.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=ID"></script>
     <!-- Revolution -->
     <script  src="<?php echo base_url(); ?>plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
     <script  src="<?php echo base_url(); ?>plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
@@ -62,12 +61,8 @@
     <script  src="<?php echo base_url(); ?>plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
     <!-- Custom scripts-->
     <script src="<?php echo base_url(); ?>dist/js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=ID"></script>
     <script>
-        new AnimOnScroll( $('#grid'), {
-            minDuration : 0.4,
-            maxDuration : 0.7,
-            viewportFactor : 0.2
-        } );
     </script>
 </body>
 </html>

@@ -4,19 +4,19 @@
             parent::__construct();
 
             $this->load->model('product');
+            $this->load->model('category');
         }
 
         public function edit() {
             $config['upload_path']          = './dist/img/';
             $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_width']            = 1000;
-            $config['max_height']           = 1077;
             $config['encrypt_name']         = TRUE;
          
             $this->load->library('upload', $config);
 
             $kode = $this->input->post('kode');
             $nama = $this->input->post('nama');
+            $id_kategori = $this->input->post('id_kategori');
             $bintang = $this->input->post('bintang');
             $variasi = $this->input->post('variasi');
             $minimal_order = $this->input->post('minimal_order');
@@ -25,6 +25,7 @@
 
             $data = array(
                 'nama' => $nama,
+                'id_kategori' => $id_kategori,
                 'bintang' => $bintang,
                 'keterangan' => $keterangan,
                 'ukuran' => $ukuran,
@@ -100,20 +101,19 @@
 
             $this->session->set_flashdata("success", "Berhasil Diedit");
 
-            redirect(base_url('admin/list_produk'));            
+            redirect(base_url('admin/list_produk'));
         }
 
         public function tambah() {
             $config['upload_path']          = './dist/img/';
             $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_width']            = 1000;
-            $config['max_height']           = 1077;
             $config['encrypt_name']         = TRUE;
          
             $this->load->library('upload', $config);
 
             $kode = $this->input->post('kode');
             $nama = $this->input->post('nama');
+            $id_kategori = $this->input->post('id_kategori');
             $bintang = $this->input->post('bintang');
             $variasi = $this->input->post('variasi');
             $minimal_order = $this->input->post('minimal_order');
@@ -123,6 +123,7 @@
             $data = array(
                 'kode' => $kode,
                 'nama' => $nama,
+                'id_kategori' => $id_kategori,
                 'bintang' => $bintang,
                 'keterangan' => $keterangan,
                 'ukuran' => $ukuran,
@@ -197,5 +198,58 @@
             $this->session->set_flashdata("success", "Berhasil Dihapus");
             
             redirect(base_url('admin/list_produk'));
+        }
+
+        public function tambah_kategori() {
+            $nama = $this->input->post('nama_kategori');
+
+            $data = array(
+                'nama' => $nama
+            );
+
+            $this->category->input($data, 'kategori');
+            
+            $this->session->set_flashdata("success", "Berhasil Ditambahkan");
+            
+            redirect(base_url('admin/tambah_produk'));
+        }
+
+        public function hapus_kategori() {
+            $id = $this->input->post('id_kategori_hapus');
+            
+            $where = array('id' => $id);
+
+            $this->category->delete($where, 'kategori');
+
+            $this->session->set_flashdata("success", "Kategori Berhasil Dihapus");
+            
+            redirect(base_url('admin/tambah_produk'));
+        }
+        public function edit_tambah_kategori() {
+            $kode = $this->input->post('kode');
+            $nama = $this->input->post('nama_kategori');
+
+            $data = array(
+                'nama' => $nama
+            );
+
+            $this->category->input($data, 'kategori');
+            
+            $this->session->set_flashdata("success", "Berhasil Ditambahkan");
+            
+            redirect(base_url('admin/edit_produk/'.$kode));
+        }
+
+        public function edit_hapus_kategori() {
+            $kode = $this->input->post('kode');            
+            $id = $this->input->post('id_kategori_hapus');
+            
+            $where = array('id' => $id);
+
+            $this->category->delete($where, 'kategori');
+
+            $this->session->set_flashdata("success", "Kategori Berhasil Dihapus");
+            
+            redirect(base_url('admin/edit_produk/'.$kode));
         }
     }

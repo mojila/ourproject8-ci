@@ -602,9 +602,6 @@
         niceSelect();
         countDown();
         revolution();
-        // owlCarousel($('.owl-slider'));
-        // syncCarousel($('.primary'), $('.second'), 1000);
-        // syncCarousel($('.ps-cake-detail'), $('.ps-cake-list'), 1000);
         magnificPopup();
         filterSlider();
         searchToggle();

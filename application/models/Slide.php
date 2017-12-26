@@ -1,39 +1,23 @@
 <?php
-    class Product extends CI_Model {
+    class Slide extends CI_Model {
         public function __construct() {
             parent::__construct();
         }
 
         public function count() {
-            return $this->db->query('SELECT * FROM produk')->num_rows();
+            return $this->db->query('SELECT * FROM slide_show')->num_rows();
         }
 
         public function get() {
-            return $this->db->order_by('kode', 'DESC')->get('produk')->result();
+            return $this->db->get('slide_show')->result();
         }
 
         public function get_gambar($table, $where) {
             return $this->db->get_where($table, $where)->result();
         }
 
-        public function get_gambar_all() {
-            return $this->db->get('gambar_produk')->result();
-        }
-
-        public function get_hot() {
-            $where = array(
-                'bintang' => 5    
-            );
-
-            return $this->db->order_by('kode', 'DESC')->get_where('produk', $where, 4, 0)->result();
-        }
-
         public function get_one($table, $where) {
             return $this->db->get_where($table, $where);
-        }
-
-        public function search($key) {
-            return $this->db->query("SELECT * FROM produk WHERE nama LIKE '%$key%'");
         }
 
         public function update($where, $data, $table) {

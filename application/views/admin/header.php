@@ -164,16 +164,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="<?php echo base_url('admin/list_produk'); ?>"><i class="fa fa-bars"></i> List</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <li class="treeview <?php if(strtolower($header['page_header']) == 'pengaturan lain'){ echo 'active'; } ?>">
           <a href="#"><i class="fa fa-cogs"></i> <span>Pengaturan Lain</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-percent"></i> Promo</a></li>
-            <li><a href="#"><i class="fa fa-picture-o"></i> Slide Show</a></li>
-            <li><a href="#"><i class="fa fa-comments"></i> Testimoni</a></li>
+            <li><a href="<?php echo base_url('admin/promo'); ?>"><i class="fa fa-percent"></i> Promo</a></li>
+            <li><a href="<?php echo base_url('admin/slideshow'); ?>"><i class="fa fa-picture-o"></i> Slide Show</a></li>
+            <li><a href="<?php echo base_url('admin/testimoni'); ?>"><i class="fa fa-comments"></i> Testimoni</a></li>
             <li><a href="#"><i class="fa fa-envelope"></i>Email Langganan</a></li>
             <li><a href="#"><i class="fa fa-file"></i>Pricelist</a></li>
             <li><a href="#"><i class="fa fa-phone"></i>Kontak</a></li>

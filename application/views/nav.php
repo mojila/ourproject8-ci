@@ -10,7 +10,7 @@
                       <li class="<?php if(strtolower($page['judul']) == 'product'){ echo 'current'; } ?>"><a href="<?php echo base_url('home/product'); ?>">Products</a></li>
                   </ul>
               </div>
-              <a class="ps-logo" href="index-2.html"><img src="<?php echo base_url('dist/img/').$situs->logo; ?>" alt=""></a>
+              <a class="ps-logo" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('dist/img/').$situs->logo; ?>" alt=""></a>
               <div class="navigation__right">
                   <ul class="menu menu--right">
                       <li class="<?php if(strtolower($page['judul']) == 'galery'){ echo 'current'; } ?>"><a href="<?php echo base_url('home/galery'); ?>">Gallery</a></li>
