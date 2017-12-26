@@ -3374,7 +3374,9 @@ textarea.form-control {
   text-align: center;
   text-transform: uppercase;
   color: #0FACF3;
-  text-outline: 2px 2px #ff0000;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .ps-banner .ps-banner__description {
@@ -3382,6 +3384,10 @@ textarea.form-control {
   font-size: 16px;
   line-height: 1.75;
   text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index: 99;
 }
 
 .ps-banner--2 .ps-banner__caption {

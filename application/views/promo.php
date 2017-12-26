@@ -11,16 +11,13 @@
         </div>
     </div>
     <div class="container pb-50">
-        <div class="col col-md-4 col-xs-6 pt-50">
-            <center><a href="#"><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style=" border-radius: 10px;"></a></center>
-        </div>
-        <div class="col col-md-4 col-xs-6 pt-50">
-            <center><a href="#"><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style=" border-radius: 10px;"></a></center>            
-        </div>
-        <div class="col col-md-4 col-xs-6 pt-50">
-            <center><a href="#"><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style=" border-radius: 10px;"></a></center>            
-        </div>
-        <div class="col col-md-4 col-xs-6 pt-50">
-            <center><a href="#"><img src="<?php echo base_url('dist/img/'); ?>banner/img-slider-2.jpg" alt="" style=" border-radius: 10px;"></a></center>            
-        </div>
+        <?php 
+            foreach($promo as $p) {
+                echo '
+                <div class="col col-md-4 col-xs-6 pt-50">
+                    <center><a href="#"><img src="'.base_url('dist/img/').$p->gambar.'" alt="" style=" border-radius: 10px;"></a></center>
+                </div>
+                ';
+            }
+        ?>
     </div>

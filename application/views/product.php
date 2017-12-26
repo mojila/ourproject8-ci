@@ -5,7 +5,7 @@
                 <h3 class="ps-section__title">OUR PROJECT 8</h3>
                 <div class="ps-breadcrumb">
                     <ol class="breadcrumb">
-                        <li><a href="<?php echo base_url('home/product'); ?>">Home</a></li>
+                        <li><a href="<?php echo base_url('home'); ?>">Home</a></li>
                         <li class="active">Product</li>
                     </ol>
                 </div>
@@ -63,10 +63,10 @@
                                                             '.$p->keterangan.'
                                                             <footer class="ps-product__footer clearfix">
                                                                 <div class="row">
-                                                                    <div class="col col-md-12">
+                                                                    <div class="col col-md-12 col-xs-12">
                                                                         <a class="ps-btn ps-btn--sm" href="'.base_url('home/product_detail/').$p->kode.'">Lihat Detail<i class="fa fa-angle-right"></i></a>
                                                                         <a class="ps-btn ps-btn--sm" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="https://media.line.me/img/web/lineit_select_line_icon_02.png" alt="" height="16"> Line</a>
-                                                                        <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'.base_url('home/product_detail').$p->kode.'"><img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/whatsapp-official-logo-png-download.png" alt="" height="16"> WA</a>
+                                                                        <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'.base_url('home/product_detail').$p->kode.'"><img src="https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png" alt="" height="16"> WA</a>
                                                                     </div>
                                                                 </div>
                                                             </footer>

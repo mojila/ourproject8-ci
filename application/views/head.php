@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/font-awesome/css/font-awesome.min.css">
     <!-- jQuery Star -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/jquery-bar-rating-master/dist/themes/fontawesome-stars.css">
     <!-- PS Icon -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/ps-icon/ps-icon.css">
     <!-- Normalize -->
@@ -25,7 +25,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Owl Caraousel -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/owl-carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/OwlCarousel/dist/assets/owl.carousel.css">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/Magnific-Popup/dist/magnific-popup.css">
     <!-- jQuery UI -->

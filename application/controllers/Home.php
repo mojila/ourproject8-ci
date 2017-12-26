@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);
 			$this->load->view('home', $data);
-			$this->load->view('footer');
+			$this->load->view('footer', $data);
 		}
 
 		public function about() {
@@ -39,8 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
-			$this->load->view('about');
-			$this->load->view('footer');
+			$this->load->view('about', $data);
+			$this->load->view('footer', $data);
 		}
 
 		public function product_detail($id) {
@@ -51,8 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
-			$this->load->view('detail');
-			$this->load->view('footer');
+			$this->load->view('detail', $data);
+			$this->load->view('footer', $data);
 		}
 
 		public function search() {
@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
 			$this->load->view('product', $data);
-			$this->load->view('footer');
+			$this->load->view('footer', $data);
 		}
 
 		public function product() {
@@ -88,13 +88,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
 			$this->load->view('product', $data);
-			$this->load->view('footer');
+			$this->load->view('footer', $data);
 		}
 
 		public function galery() {
 			$data['situs'] = $this->site->get()->row();
 			$data['page'] = array(
-				'judul' => 'Galery'
+				'judul' => 'Gallery'
 			);
 
 			$this->load->view('head', $data);
@@ -109,10 +109,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				'judul' => 'Promo'
 			);
 
+			$data['promo'] = $this->promo->get();
+
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
-			$this->load->view('promo');
-			$this->load->view('footer');
+			$this->load->view('promo', $data);
+			$this->load->view('footer', $data);
 		}
 		public function order() {
 			$data['situs'] = $this->site->get()->row();
@@ -123,6 +125,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);			
 			$this->load->view('order');
-			$this->load->view('footer');
+			$this->load->view('footer', $data);
 		}
 	}

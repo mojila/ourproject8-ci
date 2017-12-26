@@ -144,7 +144,7 @@
                                 echo '
                                 <div class="col col-md-4">
                                     <div class="row">
-                                        <center><img class="img-responsive pad pb-10" src="'.base_url('dist/img/').$t->foto.'" alt="" style=" border-radius: 10%; width: 80%;"></center>
+                                        <center><img class="img-responsive pad pb-10" src="'.base_url('dist/img/').$t->foto.'" alt="" style=" border-radius: 10%;"></center>
                                     </div>
                                     <div class="row pt-5">
                                         <h3 class="title text-center">'.$t->nama.'</h3>
