@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26 Des 2017 pada 09.49
--- Versi Server: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Dec 27, 2017 at 12:58 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gambar_produk`
+-- Table structure for table `gambar_produk`
 --
 
 CREATE TABLE `gambar_produk` (
@@ -36,7 +36,7 @@ CREATE TABLE `gambar_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gambar_produk`
+-- Dumping data for table `gambar_produk`
 --
 
 INSERT INTO `gambar_produk` (`id`, `kode_produk`, `file`, `urutan`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `gambar_produk` (`id`, `kode_produk`, `file`, `urutan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -57,7 +57,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id`, `nama`) VALUES
@@ -67,7 +67,7 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `langganan`
+-- Table structure for table `langganan`
 --
 
 CREATE TABLE `langganan` (
@@ -79,7 +79,7 @@ CREATE TABLE `langganan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengguna`
+-- Table structure for table `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -91,16 +91,17 @@ CREATE TABLE `pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengguna`
+-- Dumping data for table `pengguna`
 --
 
 INSERT INTO `pengguna` (`id`, `nama`, `surel`, `kata_sandi`, `foto`) VALUES
-(17, 'Aji', 'aji@email.com', 'c5727e67fa4ff0fa01ce37cf331c5415', '');
+(17, 'Aji', 'aji@email.com', 'c5727e67fa4ff0fa01ce37cf331c5415', ''),
+(18, 'Demo', 'demo@ourproject8.com', 'fe01ce2a7fbac8fafaed7c982a04e229', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 CREATE TABLE `produk` (
@@ -116,7 +117,7 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id`, `kode`, `id_kategori`, `nama`, `bintang`, `keterangan`, `ukuran`, `variasi`, `minimal_order`) VALUES
@@ -125,7 +126,7 @@ INSERT INTO `produk` (`id`, `kode`, `id_kategori`, `nama`, `bintang`, `keteranga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `promo`
+-- Table structure for table `promo`
 --
 
 CREATE TABLE `promo` (
@@ -135,7 +136,7 @@ CREATE TABLE `promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `promo`
+-- Dumping data for table `promo`
 --
 
 INSERT INTO `promo` (`id`, `gambar`, `judul`) VALUES
@@ -146,7 +147,7 @@ INSERT INTO `promo` (`id`, `gambar`, `judul`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `situs`
+-- Table structure for table `situs`
 --
 
 CREATE TABLE `situs` (
@@ -158,7 +159,7 @@ CREATE TABLE `situs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `situs`
+-- Dumping data for table `situs`
 --
 
 INSERT INTO `situs` (`id`, `nama`, `deskripsi`, `tentang`, `logo`) VALUES
@@ -167,7 +168,7 @@ INSERT INTO `situs` (`id`, `nama`, `deskripsi`, `tentang`, `logo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `slide_show`
+-- Table structure for table `slide_show`
 --
 
 CREATE TABLE `slide_show` (
@@ -180,7 +181,7 @@ CREATE TABLE `slide_show` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `slide_show`
+-- Dumping data for table `slide_show`
 --
 
 INSERT INTO `slide_show` (`id`, `nomor`, `gambar`, `judul`, `keterangan`, `link`) VALUES
@@ -190,7 +191,7 @@ INSERT INTO `slide_show` (`id`, `nomor`, `gambar`, `judul`, `keterangan`, `link`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sosial_hub`
+-- Table structure for table `sosial_hub`
 --
 
 CREATE TABLE `sosial_hub` (
@@ -205,7 +206,7 @@ CREATE TABLE `sosial_hub` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `testimoni`
+-- Table structure for table `testimoni`
 --
 
 CREATE TABLE `testimoni` (
@@ -216,7 +217,7 @@ CREATE TABLE `testimoni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `testimoni`
+-- Dumping data for table `testimoni`
 --
 
 INSERT INTO `testimoni` (`id`, `nama`, `isi`, `foto`) VALUES
@@ -302,7 +303,7 @@ ALTER TABLE `gambar_produk`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `langganan`
@@ -314,7 +315,7 @@ ALTER TABLE `langganan`
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `produk`

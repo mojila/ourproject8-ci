@@ -63,7 +63,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12 ">
                                     <a class="ps-btn ps-btn--sm" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="https://media.line.me/img/web/lineit_select_line_icon_02.png" alt="" height="16"> Line</a>
-                                    <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'.base_url('home/product_detail').$p->kode.'"><img src="https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png" alt="" height="16"> WA</a>
+                                    <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20<?php echo base_url('home/product_detail/').$product->kode; ?>"><img src="https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png" alt="" height="16"> WA</a>
                                 </div>
                             </div>
                         </footer>
