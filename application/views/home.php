@@ -64,7 +64,7 @@
                             <div class="col col-md-3 col-xs-6">
                             <div class="ps-product">
                                 <div class="ps-product__thumbnail">
-                                    <a class="ps-product__overlay" href="product-detail.html"></a>
+                                    <a class="ps-product__overlay" href="'.base_url('home/product_detail/').$p->kode.'"></a>
                             ';
                             foreach($gambar_produk as $g) {
                                 if($g->kode_produk == $p->kode) {
@@ -76,7 +76,7 @@
                             echo '
                                 </div>
                                 <div class="ps-product__content">
-                                    <a class="ps-product__title" href="product-detail.html">Sweet Cakes</a>
+                                    <a class="ps-product__title" href="'.base_url('home/product_detail/').$p->kode.'">Sweet Cakes</a>
                                 <select class="ps-rating">
                             ';
                             $bintang_off = 5;

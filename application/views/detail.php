@@ -16,25 +16,30 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
                         <div class="ps-product__thumbnail">
-                            
+                            <img src="<?php echo base_url('dist/img/').$gambar_produk[0]->file; ?>" alt="" class="img-responsive pad">
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
                         <header>
-                            <h3 class="ps-product__name">Anytime Cakes</h3>
+                            <h3 class="ps-product__name"><?php echo $product->nama; ?></h3>
                             <select class="ps-rating">
-                                <option value="1">1</option>
-                                <option value="1">2</option>
-                                <option value="1">3</option>
-                                <option value="1">4</option>
-                                <option value="5">5</option>
+                                <?php 
+                                    $bintang_off = 5;
+                                    $bintang_on = $product->bintang;
+                                    $bintang_sisa = $bintang_off - $bintang_on;
+                                    for($b = 1; $b <= $bintang_on; $b++){
+                                        echo '<option value="1">'.$b.'</option>';
+                                    }
+                                    if($bintang_sisa != 0){
+                                        for($c = $bintang_sisa; $c <= $bintang_off; $c++) {
+                                            echo '<option value="5">'.$c.'</option>';
+                                        }
+                                    }
+                                ?>
                             </select>
-                            <p class="ps-product__price">£15.00
-                                <del>£25.00</del>
-                            </p><a class="ps-product__quickview popup-modal" href="#quickview-modal" data-effect="mfp-zoom-out">QUICK OVERVIEW</a>
+                            <a class="ps-product__quickview popup-modal" href="#quickview-modal" data-effect="mfp-zoom-out">Keterangan Produk</a>
                             <div class="ps-product__description">
-                                <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                <p>Toffee chocolate cake apple pie sugar plum sesame snaps muffin cake pudding cupcake. Muffin danish muffin lollipop biscuit jelly beans oat cake croissant.</p>
+                                <?php echo $product->keterangan; ?>
                             </div>
                             <div class="ps-product__meta">
                                 <p><span> Availability: </span> In stock</p>

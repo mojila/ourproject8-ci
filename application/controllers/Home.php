@@ -49,10 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				'judul' => 'Product Detail'
 			);
 
+			$where = array(
+				'kode' => $id
+			);
+
+			$where_gambar = array(
+				'kode_produk' => $id
+			);
+
+			$data['product'] = $this->product->get_one('produk', $where)->row();
+			$data['gambar_produk'] = $this->product->get_gambar('gambar_produk', $where_gambar);
+
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('detail', $data);
-			$this->load->view('footer', $data);
+			$this->load->view('footer', $data);	
 		}
 
 		public function search() {

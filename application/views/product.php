@@ -108,7 +108,7 @@
                                         <?php 
                                             foreach($kategori as $k) {
                                                 echo '
-                                                    <li><a href="'.base_url('home/category/').$k->nama.'"><span class="circle"></span>'.$k->nama.'</a></li>
+                                                    <li><a href="'.base_url('home/category/').$k->id.'"><span class="circle"></span>'.$k->nama.'</a></li>
                                                 ';
                                             }
                                         ?>
