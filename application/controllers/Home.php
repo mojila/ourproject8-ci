@@ -59,6 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$data['product'] = $this->product->get_one('produk', $where)->row();
 			$data['gambar_produk'] = $this->product->get_gambar('gambar_produk', $where_gambar);
+			$data['kategori'] = $this->category->get();
 
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);

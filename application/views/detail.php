@@ -42,36 +42,28 @@
                                 <?php echo $product->keterangan; ?>
                             </div>
                             <div class="ps-product__meta">
-                                <p><span> Availability: </span> In stock</p>
-                                <p class="category"><span>CATEGORIES: </span><a href="product-grid.html">Cupcake</a>,<a href="product-grid.html"> organic</a>,<a href="product-grid.html"> sugar</a>,<a href="product-grid.html"> sweet</a>,<a href="product-grid.html"> bio</a></p>
+                                <p class="category"><span>CATEGORIES: </span><a href="<?php echo base_url('category/').$product->kode; ?>">
+                                <?php
+                                    foreach($kategori as $k) {
+                                        if($k->id == $product->id_kategori){
+                                            echo $k->nama;
+                                        }
+                                    }
+                                ?>
+                                </a>
+                                <?php echo $product->ukuran; ?>
                             </div>
                             <div class="form-group ps-product__size">
-                                <label>Size:</label>
-                                <select class="ps-select" data-placeholder="Popupar product">
-                                    <option value="01">CHOOSE AN OPTION</option>
-                                    <option value="01">Item 01</option>
-                                    <option value="02">Item 02</option>
-                                    <option value="03">Item 03</option>
-                                </select>
                             </div>
                             <div class="ps-product__shop">
-                                <div class="form-group--number">
-                                    <button class="minus"><span>-</span></button>
-                                    <input class="form-control" type="text" value="1">
-                                    <button class="plus"><span>+</span></button>
-                                </div>
-                                <ul class="ps-product__action">
-                                    <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                    <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                </ul>
+                            
                             </div>
                         </header>
                         <footer>
                             <div class="row">
-                                <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12 "><a class="ps-btn--fullwidth ps-btn" href="#">Purchase Now<i class="fa fa-angle-right"></i></a>
-                                </div>
                                 <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12 ">
-                                    <p class="ps-product__sharing">Share with:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-twitter"></i></a></p>
+                                    <a class="ps-btn ps-btn--sm" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="https://media.line.me/img/web/lineit_select_line_icon_02.png" alt="" height="16"> Line</a>
+                                    <a class="ps-btn ps-btn--sm" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'.base_url('home/product_detail').$p->kode.'"><img src="https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png" alt="" height="16"> WA</a>
                                 </div>
                             </div>
                         </footer>
