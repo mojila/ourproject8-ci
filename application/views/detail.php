@@ -15,9 +15,34 @@
             <div class="ps-product--detail">
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                        <div class="ps-product__thumbnail">
-                            <img src="<?php echo base_url('dist/img/').$gambar_produk[0]->file; ?>" alt="" class="img-responsive pad">
+                        <div class="row">
+                            <style>
+                                .img-product-detail {
+                                    height: 260px;
+                                    background-size: cover;
+                                    background-position: center;
+                                    margin: 0 auto;
+                                }
+                                .img-product-detail__item {
+                                    height: 60px;
+                                    background-size: cover;
+                                    background-position: center;
+                                    margin: 0 2px;
+                                }
+                            </style>
+                            <div class="col col-md-offset-3">
+                                <img src="<?php echo base_url('/dist/img/').$gambar_produk[0]->file; ?>" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail">
+                            </div>
                         </div>
+                        <div class="row pt-10">
+                            <div class="col col-md-offset-3">
+                                <?php 
+                                    foreach ($gambar_produk as $gambar) {
+                                        echo '<img src="'.base_url('/dist/img/').$gambar->file.'" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail__item">';
+                                    }
+                                ?>
+                            </div>
+                        </div>   
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
                         <header>
