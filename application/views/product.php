@@ -34,7 +34,7 @@
                                                     foreach($gambar_produk as $g) {
                                                         if($g->kode_produk == $p->kode) {
                                                             if($g->urutan == 1) {
-                                                                echo '<img src="'.base_url('dist/img/').$g->file.'" alt="">';
+                                                                echo '<img src="'.base_url('dist/img/').$g->file.'" alt="'.$p->nama.'" class="ps-product__image">';
                                                             }
                                                         }
                                                     }
@@ -78,7 +78,7 @@
                                         }
                                     ?>
                             </div>
-                            <!-- <div class="ps-pagination">
+                            <div class="ps-pagination">
                                 <ul class="pagination">
                                     <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
                                     <li class="active"><a href="#">1</a></li>
@@ -87,7 +87,7 @@
                                     <li><a href="#">4</a></li>
                                     <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9">

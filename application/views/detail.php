@@ -16,20 +16,6 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
                         <div class="row">
-                            <style>
-                                .img-product-detail {
-                                    height: 260px;
-                                    background-size: cover;
-                                    background-position: center;
-                                    margin: 0 auto;
-                                }
-                                .img-product-detail__item {
-                                    height: 60px;
-                                    background-size: cover;
-                                    background-position: center;
-                                    margin: 0 2px;
-                                }
-                            </style>
                             <div class="col col-md-offset-3">
                                 <img src="<?php echo base_url('/dist/img/').$gambar_produk[0]->file; ?>" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail">
                             </div>
