@@ -61,20 +61,21 @@
     <script  src="<?php echo base_url(); ?>plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
     <!-- Custom scripts-->
     <script src="<?php echo base_url(); ?>dist/js/main.js"></script>
-    <?php 
-        if(strtolower($page['judul']) == 'gallery') {
+    <?php
+        if (strtolower($page['judul']) == 'gallery') {
             echo '<script src="'.base_url('dist/js/').'instagram.js"></script>';
         }
     ?>
-    <?php 
-        if(strtolower($page['judul']) == 'product detail') {
+    <?php
+        if (strtolower($page['judul']) == 'product detail') {
             echo '<script src="'.base_url('dist/js/').'detail.js"></script>';
         }
     ?>
-    <?php 
-        if(strtolower($page['judul']) == 'home') {
+    <?php
+        if (strtolower($page['judul']) == 'home') {
             echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=ID"></script>';
-            echo '<script src="'.base_url('dist/js/').'maps.js"></script>';            
+            echo '<script src="'.base_url('dist/js/').'maps.js"></script>';
+            echo '<script src="'.base_url('dist/js/').'popup.js"></script>';
         }
     ?>
 </body>

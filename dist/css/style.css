@@ -1,3 +1,24 @@
+/* popup */
+.popup {
+  position: fixed;
+  z-index: 99;
+  bottom: 1rem;
+  right: 1rem;
+  width: 400px;
+  height: 300px;
+  background: #333;
+}
+.popup__close {
+  color: #fff;
+  float: right;
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.popup__close:hover {
+  color: red;
+}
+
 .ps-product__image {
   height: 232px;
   margin-left: 30px;
@@ -6202,7 +6223,7 @@ textarea.form-control {
 .content-center {
   justify-content: center;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .owl-slider--best-seller .owl-next {

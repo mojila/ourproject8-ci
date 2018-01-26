@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			);
 
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('about', $data);
 			$this->load->view('footer', $data);
 		}
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('head', $data);
 			$this->load->view('nav', $data);
 			$this->load->view('detail', $data);
-			$this->load->view('footer', $data);	
+			$this->load->view('footer', $data);
 		}
 
 		public function search() {
@@ -79,9 +79,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$data['product'] = $this->product->search($key)->result();
 			$data['gambar_produk'] = $this->product->get_gambar_all();
 			$data['kategori'] = $this->category->get();
-			
+
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('product', $data);
 			$this->load->view('footer', $data);
 		}
@@ -91,14 +91,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$data['page'] = array(
 				'judul' => 'Product'
 			);
-			
-			$data['jumlah'] = $this->product->count();			
+
+			$data['jumlah'] = $this->product->count();
 			$data['product'] = $this->product->get();
 			$data['gambar_produk'] = $this->product->get_gambar_all();
 			$data['kategori'] = $this->category->get();
 
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('product', $data);
 			$this->load->view('footer', $data);
 		}
@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			);
 
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('galeri');
 			$this->load->view('footer');
 		}
@@ -124,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$data['promo'] = $this->promo->get();
 
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('promo', $data);
 			$this->load->view('footer', $data);
 		}
@@ -135,7 +135,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			);
 
 			$this->load->view('head', $data);
-			$this->load->view('nav', $data);			
+			$this->load->view('nav', $data);
 			$this->load->view('order');
 			$this->load->view('footer', $data);
 		}

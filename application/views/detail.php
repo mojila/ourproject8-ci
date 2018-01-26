@@ -17,24 +17,24 @@
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
                         <div class="row">
                             <div class="col col-md-offset-3">
-                                <img src="<?php echo base_url('/dist/img/').$gambar_produk[0]->file; ?>" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail">
+                                <img id="gambar_utama" src="<?php echo base_url('/dist/img/').$gambar_produk[0]->file; ?>" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail">
                             </div>
                         </div>
                         <div class="row pt-10">
                             <div class="col col-md-offset-3">
-                                <?php 
+                                <?php
                                     foreach ($gambar_produk as $gambar) {
-                                        echo '<img src="'.base_url('/dist/img/').$gambar->file.'" alt="<?php echo $product->nama; ?>" class="img-thumbnail img-product-detail__item">';
+                                        echo '<img onclick="chooseImage(this)" src="'.base_url('/dist/img/').$gambar->file.'" alt="'.$product->nama.'" class="img-thumbnail img-product-detail__item">';
                                     }
                                 ?>
                             </div>
-                        </div>   
+                        </div>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
                         <header>
                             <h3 class="ps-product__name"><?php echo $product->nama; ?></h3>
                             <select class="ps-rating">
-                                <?php 
+                                <?php
                                     $bintang_off = 5;
                                     $bintang_on = $product->bintang;
                                     $bintang_sisa = $bintang_off - $bintang_on;
@@ -67,7 +67,7 @@
                             <div class="form-group ps-product__size">
                             </div>
                             <div class="ps-product__shop">
-                            
+
                             </div>
                         </header>
                         <footer>

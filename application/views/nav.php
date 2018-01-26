@@ -1,5 +1,5 @@
 <div class="header--sidebar"></div>
-    <header class="header" data-responsive="1199">  
+    <header class="header" data-responsive="1199">
         <nav class="navigation">
             <div class="container">
               <div class="menu-toggle"><span></span></div>
@@ -7,7 +7,7 @@
                   <ul class="menu menu--left">
                       <li class="<?php if(strtolower($page['judul']) == 'home'){ echo 'current'; } ?>"><a href="<?php echo base_url(); ?>">Home</a></li>
                       <li class="<?php if(strtolower($page['judul']) == 'about'){ echo 'current'; } ?>"><a href="<?php echo base_url('home/about'); ?>">About</a></li>
-                      <li class="<?php if(strtolower($page['judul']) == 'product'){ echo 'current'; } ?>"><a href="<?php echo base_url('home/product'); ?>">Products</a></li>
+                      <li class="<?php if(strtolower($page['judul']) == 'product'){ echo 'current'; } ?>"><a href="<?php echo base_url('produk'); ?>">Products</a></li>
                   </ul>
               </div>
               <a class="ps-logo" href="<?php echo base_url(); ?>"><img src="<?php echo base_url('dist/img/').$situs->logo; ?>" alt=""></a>

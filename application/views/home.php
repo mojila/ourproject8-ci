@@ -50,7 +50,7 @@
                     </ul>
                 </div>
             </div>
-        </div>  
+        </div>
         <section class="ps-section ps-section--offer pt-20 pb-20">
             <div class="container">
                 <div class="ps-section__header text-center mb-50">
@@ -58,7 +58,7 @@
                     <h3 class="ps-section__title ps-section__title--full">HOT PRODUCT</h3>
                 </div>
                 <div class="ps-section__content">
-                    <?php 
+                    <?php
                         foreach($hot_produk as $p) {
                             echo '
                             <div class="col col-md-3 col-xs-6">
@@ -100,7 +100,7 @@
                     ?>
                 </div>
             </div>
-        </section> 
+        </section>
         <section class="ps-section ps-section--offer pt-10 pb-40">
             <div class="container">
                 <div class="ps-section__header text-center mb-50">
@@ -129,7 +129,7 @@
                     ?>
                 </div>
             </div>
-        </section>        
+        </section>
         <div class="ps-section ps-section--offer">
             <div class="container">
                 <div class="ps-section__header text-center mb-100">
@@ -137,41 +137,22 @@
                     <h3 class="ps-section__title ps-section__title--full">TESTIMONIAL</h3>
                 </div>
                 <div class="ps-section__content">
-                    <?php 
-                        $j = 0;
+                    <?php
                         foreach($testimoni as $t) {
-                            if($j == 1) {
-                                echo '
-                                <div class="col col-md-4">
-                                    <div class="row">
-                                        <center><img class="img-responsive pad pb-10" src="'.base_url('dist/img/').$t->foto.'" alt="" style=" border-radius: 10%;"></center>
-                                    </div>
-                                    <div class="row pt-5">
-                                        <h3 class="title text-center">'.$t->nama.'</h3>
-                                    </div>
-                                    <hr>
-                                    <div class="row text-center">
-                                        <p class"">"'.$t->isi.'"</p>  
-                                    </div>
-                                </div>
-                                ';
-                            } else {
-                                echo '
-                                <div class="col col-md-4">
-                                    <div class="row">
-                                        <center><img class="img-responsive pad pb-10" src="'.base_url('dist/img/').$t->foto.'" alt="" style=" border-radius: 10%;"></center>
-                                    </div>
-                                    <div class="row pt-5">
-                                        <h3 class="title text-center">'.$t->nama.'</h3>
-                                    </div>
-                                    <hr>
-                                    <div class="row text-center">
-                                        <p class"">"'.$t->isi.'"</p>  
-                                    </div>
-                                </div>
-                                ';
-                            }
-                            $j++;
+                          echo '
+                          <div class="col col-md-4 col-sm-4 col-xs-4">
+                              <div class="row">
+                                  <center><img class="img-responsive pad pb-10" src="'.base_url('dist/img/').$t->foto.'" alt="" style=" border-radius: 10%; width: 90%;"></center>
+                              </div>
+                              <div class="row pt-5">
+                                  <h3 class="title text-center">'.$t->nama.'</h3>
+                              </div>
+                              <hr>
+                              <div class="row text-center">
+                                  <p class"">"'.$t->isi.'"</p>
+                              </div>
+                          </div>
+                          ';
                         }
                     ?>
                 </div>
@@ -180,4 +161,6 @@
         <section class="ps-section ps-section--map">
             <div id="map"></div>
         </section>
-        
+        <div id="popup-subscribe" class="popup">
+          <span class="popup__close" onclick="popupClose()"><i class="fa fa-close"></i></span>
+        </div>

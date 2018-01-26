@@ -19,45 +19,94 @@
         <div class="ps-shop-listing pt-80 pb-40">
           <!-- Fitur -->
           <div class="row">
-            <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
-              <img src="<?php echo base_url('dist/img/product-banner/012x.jpg'); ?>" alt="" class="mb-30">
-            </div>
-            <div class="col col-lg-8 col-md-8 col-sm-6 col-xs-12">
-              <img src="<?php echo base_url('dist/img/product-banner/022x.jpg'); ?>" alt="" class="mb-30">
-            </div>
+            <?php
+                foreach($promo as $pr) {
+                  echo '<div class="col col-md-4 col-xs-6 pt-10">
+                      <img src="'.base_url('dist/img/').$pr->gambar.'" alt="Gagal Dimuat" height="160" class="img-responsive pad" />
+                  </div>';
+                }
+            ?>
           </div>
           <hr>
           <div class="row">
+            <!-- product-list -->
             <div class="ps-shop">
-              <!-- Item produk -->
-              <div class="ps-product--list ps-product--list-large">
-                <div class="ps-product__thumbnail">
-                  <a href="#" class="ps-product__overlay"></a>
-                  <img src="<?php echo base_url('dist/img/cake/img-cake-2.jpg'); ?>" alt="">
-                </div>
-                <div class="ps-product__content">
-                  <h4 class="ps-product__title pt-20">Red Sugar Flower</h4>
-                  <select class="ps-rating" name="">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <p class="ps-product__price">Keterangan</p>
-                  <p>Isi dari keterangan</p>
-                  <footer class="ps-product__footer clearfix">
-                    <a href="#" class="ps-btn ps-btn--sm">Detail <i class="fa fa-angle-right"></i></a>
-                    <ul class="ps-product__action">
-                      <li><a data-tooltip="Line" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="https://media.line.me/img/web/lineit_select_line_icon_02.png" alt="" height="32" style="margin-top: 0.65rem;"></a></li>
-                      <li><a data-tooltip="Whatsapp" style="background: #00E676 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'"><img src="https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png" alt="" height="32" style="margin-top: 0.65rem;"></a></li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-              <hr>
+              <!-- item -->
+              <?php
+                $icon = array(
+                  'wa' => 'https://cdn.iconverticons.com/files/png/1c3a93787b4867ca_256x256.png',
+                  'line' => 'https://media.line.me/img/web/lineit_select_line_icon_02.png'
+                );
+
+                foreach ($produk as $p) {
+                  # code...
+                  echo '
+                    <div class="ps-product--list ps-product--list-large">
+                      <div class="ps-product__thumbnail">
+                        <a href="'.base_url('home/product_detail/').$p->kode.'" class="ps-product__overlay"></a>
+                  ';
+                  foreach ($gambar_produk as $g) {
+                    # code...
+                    if ($g->kode_produk == $p->kode) {
+                      if ($g->urutan == 1) {
+                        echo '<img src="'.base_url('dist/img/').$g->file.'" alt="">';
+                      }
+                    }
+                  }
+                  echo '
+                      </div>
+                      <div class="ps-product__content">
+                        <h4 class="ps-product__title pt-20">'.$p->nama.'</h4>
+                        <select class="ps-rating" name="">
+                  ';
+                  $bintang_off = 5;
+                  $bintang_on = $p->bintang;
+                  $bintang_sisa = $bintang_off - $bintang_on;
+                  for ($b=1; $b <= $bintang_on; $b++) {
+                    # code...
+                    echo '<option value="1">'.$b.'</option>';
+                  }
+                  if ($bintang_sisa != 0) {
+                    for ($c=$bintang_sisa; $c <= $bintang_off; $c++) {
+                      # code...
+                      echo '<option value="5">'.$c.'</option>';
+                    }
+                  }
+                  echo '
+                        </select>
+                        <p class="ps-product__price">Keterangan</p>
+                        <p>Isi dari keterangan</p>
+                        <footer class="ps-product__footer clearfix">
+                          <a href="'.base_url('home/product_detail/').$p->kode.'" class="ps-btn ps-btn--sm">Detail <i class="fa fa-angle-right"></i></a>
+                          <ul class="ps-product__action">
+                            <li><a data-tooltip="Line" style="background: #00B833 !important;" href="https://line.me/R/ti/p/%40ourproject8"><img src="'.$icon['line'].'" alt="" height="32" style="margin-top: 0.65rem;"></a></li>
+                            <li><a data-tooltip="Whatsapp" style="background: #0F9D58 !important;" href="https://api.whatsapp.com/send?phone=6281249647753&amp;text=Saya%20Mau%20Order%20|%20'.base_url('home/product_detail/').$p->kode.'"><img src="'.$icon['wa'].'" alt="" height="32" style="margin-top: 0.65rem;"></a></li>
+                          </ul>
+                        </footer>
+                      </div>
+                    </div>
+                    <hr>
+                  ';
+                }
+              ?>
+              <!-- /item -->
             </div>
           </div>
+          <!-- /product-list -->
+          <!-- pagination -->
+          <div class="row">
+            <div class="ps-pagination">
+              <ul class="pagination">
+                  <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /pagination -->
         </div>
       </div>
       <!-- Sidebar -->
