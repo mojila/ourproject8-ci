@@ -97,12 +97,24 @@
           <div class="row">
             <div class="ps-pagination">
               <ul class="pagination">
-                  <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
+                  <?php 
+                    if (isset($halaman)) {
+                      if ($halaman > 1) {
+                        echo '<li><a href="#"><i class="fa fa-arrow-left"></i></a></li>';
+                      }
+                    }
+                    // iterasi halaman
+                    echo '<li class="active"><a href="'.base_url('produk').'">1</a></li>';
+                    
+
+                    if ($jumlah_produk > 10) {
+                      echo '<li><a href="#"><i class="fa fa-arrow-right"></i></a></li>';
+                    }
+                  ?>
+                  <!-- <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+                  <li><a href="#">4</a></li> -->
+                  
               </ul>
             </div>
           </div>
@@ -125,8 +137,12 @@
             </div>
             <div class="ps-widget__content">
               <ul class="ps-list--circle">
-                <li class="current"><a href="#"><span class="circle"></span> Semua Produk (100)</a></li>
-                <li><a href="#"><span class="circle"></span> Stiker (100)</a></li>
+                <li class="current"><a href="#"><span class="circle"></span> Semua Produk</a></li>
+                <?php
+                  foreach ($kategori['item'] as $k ) {
+                    echo '<li><a href="#"><span class="circle"></span> '.$k->nama.'</a></li>';
+                  }
+                ?>
               </ul>
             </div>
           </aside>

@@ -8,7 +8,8 @@
             return $this->db->query('SELECT * FROM produk')->num_rows();
         }
 
-        public function get() {
+        public function get($start, $end) {
+            $this->db->limit($end, $start);
             return $this->db->order_by('kode', 'DESC')->get('produk')->result();
         }
 

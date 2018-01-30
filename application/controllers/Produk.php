@@ -9,6 +9,7 @@
       $this->load->model('product');
       $this->load->model('site');
       $this->load->model('promo');
+      $this->load->model('category');
     }
 
     public function index()
@@ -19,8 +20,12 @@
 			);
 
       $data['promo'] = $this->promo->get_home_promo();
-      $data['produk'] = $this->product->get();
+      $data['produk'] = $this->product->get(0, 10);
+      $data['jumlah_produk'] = $this->product->count();
       $data['gambar_produk'] = $this->product->get_gambar_all();
+      $data['kategori'] = array(
+        'item' => $this->category->get()
+      );
 
       $this->load->view('head', $data);
 			$this->load->view('nav', $data);
