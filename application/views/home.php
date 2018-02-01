@@ -163,4 +163,6 @@
         </section>
         <div id="popup-subscribe" class="popup">
           <span class="popup__close" onclick="popupClose()"><i class="fa fa-close"></i></span>
+          <div><img class="img img-responsive pad" style="height: 160px; margin: 2rem auto;" src="<?php echo base_url('dist/img/').$situs->logo; ?>" alt=""></div>
+          <div style="padding: 1rem 3rem 3rem 3rem; display: flex; align-content: center;"><input id="inputLangganan" placeholder="Masukkan Nomor WA atau Email" style="border: none;border-radius: 0 !important;" type="text" class="form-control"><button class="btn btn-sm" style="border: none; background-color: #0FACF3; color: #fff; border-radius: 0 !important;" onclick="$.submit()">LANGGANAN</button></div>
         </div>

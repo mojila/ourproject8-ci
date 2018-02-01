@@ -97,24 +97,28 @@
           <div class="row">
             <div class="ps-pagination">
               <ul class="pagination">
-                  <?php 
-                    if (isset($halaman)) {
-                      if ($halaman > 1) {
-                        echo '<li><a href="#"><i class="fa fa-arrow-left"></i></a></li>';
+                  <?php
+                    if ((!isset($kategori['pilihan'])) || (!isset($pencarian['keyword']))) {
+                      $total_halaman = round($jumlah_produk / 10 + (($jumlah_produk / 10) > round($jumlah_produk / 10) ? 1:0));
+
+                      if (isset($halaman)) {
+                        if ($halaman > 1) {
+                          echo '<li><a href="'.base_url('/produk/halaman/').($halaman - 1).'"><i class="fa fa-arrow-left"></i></a></li>';
+                        }
+                      }
+                      // iterasi halaman
+                      echo '<li class="active"><a href="'.base_url('produk').'">1</a></li>';
+                      if ($total_halaman > 1) {
+                        for ($pg = 1; $pg < $total_halaman; $pg++) {
+                          echo '<li class="'.($halaman == ($pg+1) ? 'active':'').'"><a href="'.base_url('produk/halaman/').($pg+1).'">'.($pg+1).'</a></li>';
+                        }
+                      }
+
+                      if ($jumlah_produk > 10) {
+                        echo '<li><a href="'.base_url('/produk/halaman/').($halaman + 1).'"><i class="fa fa-arrow-right"></i></a></li>';
                       }
                     }
-                    // iterasi halaman
-                    echo '<li class="active"><a href="'.base_url('produk').'">1</a></li>';
-                    
-
-                    if ($jumlah_produk > 10) {
-                      echo '<li><a href="#"><i class="fa fa-arrow-right"></i></a></li>';
-                    }
                   ?>
-                  <!-- <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li> -->
-                  
               </ul>
             </div>
           </div>
@@ -126,9 +130,9 @@
         <div class="ps-sidebar">
           <!-- Search -->
           <aside class="ps-widget ps-widget--sidebar ps-widget--search">
-            <form class="" action="" method="post">
-              <input class="form-control" type="text" name="" value="" placeholder="Pencarian ...">
-              <button type="submit" name="button"><i class="ps-icon--search"></i></button>
+            <form class="" action="<?php echo base_url('produk/pencarian'); ?>" method="post">
+              <input class="form-control" style="color: #444;" type="text" name="keyword" value="<?php echo (isset($pencarian['keyword']) ? $pencarian['keyword']:'') ?>" placeholder="Pencarian ...">
+              <button type="submit"><i class="ps-icon--search"></i></button>
             </form>
           </aside>
           <aside class="ps-widget ps-widget--sidebar ps-widget--category">
@@ -137,10 +141,10 @@
             </div>
             <div class="ps-widget__content">
               <ul class="ps-list--circle">
-                <li class="current"><a href="#"><span class="circle"></span> Semua Produk</a></li>
+                <li class="<?php echo (isset($kategori['pilihan']) ? '':'current'); ?>"><a href="<?php echo base_url('/produk'); ?>"><span class="circle"></span> Semua Produk</a></li>
                 <?php
                   foreach ($kategori['item'] as $k ) {
-                    echo '<li><a href="#"><span class="circle"></span> '.$k->nama.'</a></li>';
+                    echo '<li class="'.(isset($kategori['pilihan']) && $kategori['pilihan'] == $k->id ? 'current':'').'"><a href="'.base_url('/produk/kategori/').$k->id.'"><span class="circle"></span> '.$k->nama.'</a></li>';
                   }
                 ?>
               </ul>

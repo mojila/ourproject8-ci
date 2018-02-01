@@ -10,7 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->model('product');
             $this->load->model('promo');
             $this->load->model('testimoni');
-            $this->load->model('category');
+			$this->load->model('category');
+			$this->load->model('langganan');
 		}
 
 		public function index() {
@@ -138,5 +139,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('nav', $data);
 			$this->load->view('order');
 			$this->load->view('footer', $data);
+		}
+
+		public function langganan()
+		{
+			$data = array(
+				'email' => $this->input->get('contact')
+			);
+
+			
+			$obj = array(
+				'contact' => $data['email'],
+				'message' => (isset($data['email']) ? 'success':'failed')
+			);
+
+			if ($this->langganan->input($data)) {
+				echo json_encode($obj);
+			} else {
+				echo json_encode($obj);
+			}
 		}
 	}

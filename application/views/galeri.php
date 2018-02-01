@@ -10,6 +10,7 @@
             </div>
         </div>
     </div>
-    <div id="list_instagram" class="container pb-50">
-        
+    <div id="list_instagram" class="container pb-50"></div>
+    <div class="container">
+        <center><a href="https://www.instagram.com/ourproject8/"><button class="btn btn-lg btn-primary" style="margin: 1rem auto;">Lihat Semuanya</button></a></center>
     </div>

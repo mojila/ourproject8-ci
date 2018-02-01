@@ -1,3 +1,21 @@
+$(document).ready(function() {
+    $.submit = function() {
+        if (document.getElementById('inputLangganan').value != '') {
+            $.ajax({
+                url: 'http://localhost:8000/home/langganan',
+                method: 'get',
+                data: { 'contact': document.getElementById('inputLangganan').value },
+                success: function(res) {
+                    swal("Berhasil!", "Anda Berhasil Berlangganan produk Kami! terimakasih.", "success");
+                    popupClose();
+                }
+            });          
+        } else {
+            swal('Form langganan masih kosong, silahkan isi terlebih dahulu.');
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   var isMobile = {
       Android: function() {

@@ -174,9 +174,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="<?php echo base_url('admin/promo'); ?>"><i class="fa fa-percent"></i> Promo</a></li>
             <li><a href="<?php echo base_url('admin/slideshow'); ?>"><i class="fa fa-picture-o"></i> Slide Show</a></li>
             <li><a href="<?php echo base_url('admin/testimoni'); ?>"><i class="fa fa-comments"></i> Testimoni</a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i>Email Langganan</a></li>
-            <li><a href="#"><i class="fa fa-file"></i>Pricelist</a></li>
-            <li><a href="#"><i class="fa fa-phone"></i>Kontak</a></li>
+            <li><a href="<?php echo base_url('admin/langganan'); ?>"><i class="fa fa-envelope"></i>Email/WA Langganan</a></li>
           </ul>
         </li>
         <li class="header">PENGGUNA</li>

@@ -73,6 +73,7 @@
     ?>
     <?php
         if (strtolower($page['judul']) == 'home') {
+            echo '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>';
             echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=ID"></script>';
             echo '<script src="'.base_url('dist/js/').'maps.js"></script>';
             echo '<script src="'.base_url('dist/js/').'popup.js"></script>';

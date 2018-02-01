@@ -12,6 +12,14 @@
             $this->db->limit($end, $start);
             return $this->db->order_by('kode', 'DESC')->get('produk')->result();
         }
+        
+        public function get_all(){
+            return $this->db->order_by('kode', 'DESC')->get('produk')->result();
+        }
+
+        public function get_per_kategori($where) {
+            return $this->db->order_by('kode', 'DESC')->get_where('produk', $where)->result();
+        }
 
         public function get_gambar($table, $where) {
             return $this->db->get_where($table, $where)->result();
@@ -34,7 +42,7 @@
         }
 
         public function search($key) {
-            return $this->db->query("SELECT * FROM produk WHERE nama LIKE '%$key%'");
+            return $this->db->query("SELECT * FROM produk WHERE nama LIKE '%$key%'")->result();
         }
 
         public function update($where, $data, $table) {

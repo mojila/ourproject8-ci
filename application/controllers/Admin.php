@@ -9,6 +9,7 @@
 
             $this->load->model('site');
             $this->load->model('product');
+            $this->load->model('langganan');
             $this->load->model('category');
             $this->load->model('user');
             $this->load->model('slide');
@@ -165,12 +166,26 @@
 
             $data['site'] = $this->site->get()->row();
 
-            $data['product'] = $this->product->get();
+            $data['product'] = $this->product->get_all();
 
-            $this->load->view('/admin/header', $data);    
+            $this->load->view('/admin/header', $data);
             $this->load->view('/admin/list_produk', $data);
             $this->load->view('/admin/footer');
         }
 
-        
+        public function langganan()
+        {
+            $data['header'] = array(
+                'page_header' => 'Langganan',
+                'description' => 'Manajemen Langganan'
+            );
+
+            $data['site'] = $this->site->get()->row();
+
+            $data['langganan'] = $this->langganan->get_all();
+
+            $this->load->view('/admin/header', $data);
+            $this->load->view('/admin/langganan', $data);
+            $this->load->view('/admin/footer');            
+        }
     }
